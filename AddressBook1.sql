@@ -1,0 +1,21 @@
+create database addressBook1;
+show databases;
+use addressBook1;
+show tables;
+create table addressBook1(id int primary key,firstname varchar(50),lastname varchar(50),address varchar(100),city varchar(50),
+state varchar(50),zip int,phone_number long,email varchar(100));
+desc addressBook1;
+insert into addressBook1 value (1,'Kasturi', 'Pansare', 'Nerul', 'Thane', 'MH', 456123, 984563521, 'kast@gmail.com');
+insert into addressBook1 value (2,'Sagar', 'Nikam', 'Vashi', 'NaviMumbai', 'MH', 895412, 9745861250, 'sagar@gmail.com');
+insert into addressBook1 value (3,'Dhanashree', 'Pawar', 'Nerul', 'Thane', 'MH', 945871, 9786124580, 'dhanu@gmail.com');
+select * from addressBook1;
+update addressBook1 set firstname = 'Nilesh' where firstname = 'Sagar'; 
+delete from addressBook1 where ID = '2';
+select * from addressBook1 where state ="MH" or city= "Thane";
+select count(state) from addressBook1 where city = "Thane";
+select * from addressBook1 order by firstname asc;
+insert into addressBook1 value (4,'Aakash', 'Shinde', 'Vashi', 'Abcd', 'MH', 984568, 9789621475, 'sdfghjn@gmail.com');
+insert into addressBook1 value (5,'Dhiraj', 'Kale', 'Belapur', 'Lmno', 'TN', 951236, 9474123589, 'poikujhygf@gmail.com');
+insert into addressBook1 value (6,'Sunil', 'Sable', 'Sanpada', 'Kahgh', 'PB', 785412, 8621475202, 'dxfcgvhjb@gmail.com');
+insert into addressBook1 value (7,'Swapnil', 'Gore', 'Chembur', 'Satr', 'KR', 951480, 9547852655, 'szdfxgcn@gmail.com');
+select * from addressBook1 order by city asc;
